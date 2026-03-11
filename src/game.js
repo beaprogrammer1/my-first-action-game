@@ -1,16 +1,13 @@
-// Game ki Configuration
 const config = {
     type: Phaser.AUTO,
-    width: 400, // Mobile screen size width
-    height: 600, // Mobile screen size height
+    width: 400,
+    height: 600,
     physics: {
-        default: 'arcade', // Takranay aur girnay ki physics
-        arcade: {
-            gravity: { y: 0 }, // Action game hai to gravity 0 rakhtay hain (Top-down)
-            debug: false
-        }
+        default: 'arcade',
+        arcade: { gravity: { y: 0 }, debug: false }
     },
-    scene: [Scene1] // Level 1 ko load karo
+    // MainMenu aur Scene1 yahan define hona zaroori hain
+    scene: [MainMenu, Scene1] 
 };
 
 const game = new Phaser.Game(config);
